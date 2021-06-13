@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <h1>Visualização do Estudante</h1>
+    </div>
+    <div class="col-8 m-auto pt-3 pb-2 text-center">
+        <a href="/" class="btn btn-outline-secondary btn-sm">Voltar</a>
+    </div>
+    <div class="col-8 m-auto pt-4 pb-2 text-center">
+        <table class="table table-bordered">
+            <tbody>
+                <strong>Nome: </strong>{{students.nome}}<br>
+                <strong>Data de Nascimentp: </strong>{{students.nascimento}}<br>
+                <strong>Idade: </strong>{{students.idade}}<br>
+                <strong>CPF: </strong>{{students.cpf}}<br>
+                <strong>Rua: </strong>{{students.rua}}<br>
+                <strong>Numero: </strong>{{students.numero}}<br>
+                <strong>Complemento: </strong>{{students.complemento}}<br>
+                <strong>Bairro: </strong>{{students.bairro}}<br>
+
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col-8 m-auto pt-2 pb-2 text-center">
+    <h1>Estudante</h1>
+</div>
+
+<div class="col-8 m-auto pt-3 pb-2 text-center">
+    <a href="/student_form" class="btn btn-success">+</a>
+</div>
+
+<div class="col-8 m-auto pt-4 pb-2 text-center">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">CPF</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for student in students %}
+        <tr>
+            <th>{{student.id}}</th>
+            <td>{{student.nome}}</td>
+            <td>{{student.cpf}}</td>
+            <td>
+                <a href="/view_seller/{{student.id}}" class="btn btn-dark">Visualizar</a>
+                <a href="/edit_seller/{{student.id}}" class="btn btn-primary">Atualizar</a>
+                <a href="/delete_seller/{{student.id}}" class="btn btn-danger btnDel">Deletar</a>
+            </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+</div>
+
+{% endblock %}

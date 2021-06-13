@@ -1,21 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="col-8 m-auto pt-2 pb-2 text-center">
-    <h1>Estudante</h1>
+<div class="col-4 m-auto pt-2 pb-2 text-center">
+    <h1>Alunos</h1>
 </div>
 
-<div class="col-8 m-auto pt-3 pb-2 text-center">
-    <a href="/student_form" class="btn btn-success">+</a>
+<div class="col-4 m-auto pt-2 pb-2 text-center">
+    <a href="/student_form" class="btn btn-outline-secondary btn-sm">+</a>
 </div>
 
-<div class="col-8 m-auto pt-4 pb-2 text-center">
-    <table class="table">
+<div class="col-4 m-auto pt-4 pb-2 text-center">
+    <table class="table table-bordered">
       <thead class="thead-dark">
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Nome</th>
             <th scope="col">CPF</th>
+            <th scope="col">FUNÇÕES</th>
         </tr>
       </thead>
       <tbody>
@@ -25,9 +26,9 @@
             <td>{{student.nome}}</td>
             <td>{{student.cpf}}</td>
             <td>
-                <a href="/view_seller/{{student.id}}" class="btn btn-dark">Visualizar</a>
-                <a href="/edit_seller/{{student.id}}" class="btn btn-primary">Atualizar</a>
-                <a href="/delete_seller/{{student.id}}" class="btn btn-danger btnDel">Deletar</a>
+                <a href="/view_student/{{student.id}}" class="btn btn-outline-secondary btn-sm ">Visualizar</a>
+                <a href="/edit_student/{{student.id}}" class="btn btn-outline-secondary btn-sm ">Atualizar</a>
+                <a href="/delete_student/{{student.id}}" class="btn btn-outline-secondary btn-sm  btnDel">Deletar</a>
             </td>
         </tr>
       {% endfor %}
